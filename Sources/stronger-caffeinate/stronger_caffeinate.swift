@@ -4,6 +4,8 @@ import IOKit.pwr_mgt
 
 @main
 struct StrongerCaffeinate: ParsableCommand {
+    static let version = "2.0.0"
+
     static let configuration = CommandConfiguration(
         commandName: "stronger-caffeinate",
         abstract: "Prevent sleep using strong IOPMAssertion (NoDisplaySleep / NoIdleSleep).",
@@ -13,7 +15,8 @@ struct StrongerCaffeinate: ParsableCommand {
             that provide stronger sleep prevention guarantees.
 
             Without any flags, defaults to -d -i (both display and idle sleep prevention).
-            """
+            """,
+        version: version
     )
 
     @Flag(name: .shortAndLong, help: "Prevent display sleep (NoDisplaySleep).")
