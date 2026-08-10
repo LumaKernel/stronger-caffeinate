@@ -4,7 +4,7 @@ import IOKit.pwr_mgt
 
 @main
 struct StrongerCaffeinate: ParsableCommand {
-    static let version = "2.0.0"
+    static let version = "3.0.0"
 
     static let configuration = CommandConfiguration(
         commandName: "stronger-caffeinate",
